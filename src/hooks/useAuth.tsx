@@ -10,7 +10,9 @@ export function useAuth() {
     let mounted = true;
 
     supabase.auth.getSession().then(({ data: { session } }) => {
-      if (mounted && session?.user) login(mapSupabaseUser(session.user));
+      if (mounted && session?.user) {
+        login(mapSupabaseUser(session.user));
+      }
       if (mounted) setLoading(false);
     });
 
