@@ -31,7 +31,7 @@
     
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#9333ea">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="CharisFlix">
     
@@ -53,6 +53,10 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Correct way to include your JS for Vite -->
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- After build (Netlify), Vite automatically replaces this with the compiled JS file -->
   </body>
 </html>
